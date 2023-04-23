@@ -1,0 +1,275 @@
+:root {
+  --section_bg: #000000;
+  --heder_text_color: #808080;
+  --main_text_color: #696969;
+}
+
+/* Reset start */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Reset end */
+
+body {
+  /* max-width: 1440px; */
+  position: relative;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1440px;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: var(--text);
+  background-color: #ffffff;
+}
+
+/* responsive images */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.link,
+a {
+  color: var(--heder_text_color);
+  text-decoration: none;
+}
+
+.btn {
+  padding: 0;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.04em;
+
+  border: none;
+  cursor: pointer;
+}
+
+.section {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: var(--section_bg);
+  color: var(--main_text_color);
+}
+
+/**
+  |============================
+  | Main styles
+  |============================
+*/
+
+/* header */
+
+header {
+  position: fixed;
+  top: 0;
+  max-width: 1440px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: transparent;
+  color: var(--heder_text_color);
+}
+
+header > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 9px;
+  line-height: 1.2;
+
+  font-weight: 400;
+}
+
+/* Hero section */
+
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+
+  font-size: 32px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.button_list {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  padding: 0 50px;
+}
+
+.modal_btn {
+  height: 30px;
+  padding: 0 10px;
+
+  border-radius: 4px;
+  border: solid 1px var(--main_text_color);
+}
+
+/**
+  |============================
+  |          modal
+  |============================
+*/
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+
+  width: 408px;
+  height: 576px;
+  padding: 62px 24px 32px 24px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(46, 47, 66, 0.4);
+
+  transition: opacity 250ms, visibility 250ms;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-close-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 24px;
+  right: 24px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: tomato;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+
+/* second modal */
+
+.second_mod_backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(80, 60, 70, 0.5);
+}
+
+/* three modal */
+
+.big-modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 1000px;
+  height: 600px;
+  padding: 20px;
+
+  background-color: #808080;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+/* four modal */
+
+.modal_map {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 800px;
+  height: 600px;
+  padding: 20px;
+
+  background-color: #808080;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}

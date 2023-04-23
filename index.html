@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Modalky</title>
+  </head>
+  <body>
+    <header>
+      <a href="">Logo<span>MODALKY</span></a>
+      <ul>
+        <li><a href="">Main page</a></li>
+        <li><a href="">Second page</a></li>
+        <li><a href="">Three page</a></li>
+        <li><a href="">Four page</a></li>
+      </ul>
+      <ul>
+        <li><a href="tel:+380965555555">+38 096 555 55 55</a></li>
+        <li><a href="meilto:modalki@gmail.com">modalki@gmail.com</a></li>
+      </ul>
+    </header>
+    <section class="section">
+      <h1>Modalky</h1>
+      <ul class="button_list">
+        <li>
+          <button class="modal_btn btn" type="button" data-modal-open-1>
+            Modal_first
+          </button>
+        </li>
+        <li>
+          <button class="modal_btn btn" type="button" data-modal-open-2>
+            Modal_second
+          </button>
+        </li>
+        <li>
+          <button class="modal_btn btn" type="button" data-modal-open-3>
+            Modal_three
+          </button>
+        </li>
+        <li>
+          <button class="modal_btn btn" type="button" data-modal-open-4>
+            Modal_four
+          </button>
+        </li>
+      </ul>
+    </section>
+    <!-- <section class="text_section section">
+      <h2>lorem</h2>
+      <p style="font-size: 14">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi neque
+        reiciendis architecto libero perferendis cupiditate similique dolores
+        tenetur praesentium. Voluptatum commodi laudantium possimus, incidunt
+        itaque eaque deleniti quas sunt accusamus. Iure, asperiores. Ex
+        similique architecto tenetur ad optio provident quae assumenda obcaecati
+        maiores placeat quod nostrum molestias non, perferendis odio in ducimus
+        mollitia dicta esse! Deleniti nam commodi non reprehenderit? Eum
+        molestias nesciunt unde fugit temporibus vero, omnis blanditiis deserunt
+        hic quibusdam recusandae suscipit nostrum veniam dolores repellendus
+        ipsam mollitia facere officia commodi nihil! In enim quia autem quaerat
+        quasi? Quaerat laudantium enim eaque ipsam unde voluptate explicabo
+        nobis neque ab saepe accusamus, commodi vel at? Laboriosam nesciunt
+        atque adipisci officiis eligendi tempore assumenda quas autem eos, neque
+        harum ipsa! Ad consequatur non voluptates itaque. Alias mollitia
+        molestias repudiandae minima delectus harum qui dolores, sed natus ipsa
+        sint nulla officia ab ut autem incidunt excepturi quam numquam animi
+        optio quod. Commodi, deserunt, error tempora alias sed veritatis hic
+        odit dolorum minus assumenda quo iure sapiente facilis vero officia!
+        Dolorem qui ad rerum eius impedit possimus itaque deserunt, velit
+        officia consectetur. Possimus, beatae numquam sint provident accusamus
+        eos delectus accusantium, sit quisquam culpa vitae suscipit porro animi,
+        impedit necessitatibus laborum minus. Eligendi numquam consequuntur
+        repellendus saepe sequi! Illum vero magnam eum. Non dolores amet
+        inventore? Eaque, esse aliquam! Quaerat quasi officiis ex? Modi error
+        earum molestiae odio hic omnis ducimus ipsa quod eos, laboriosam nulla
+        excepturi, nesciunt, animi temporibus distinctio corrupti? Beatae
+        dignissimos esse quisquam in, nostrum excepturi exercitationem,
+        provident accusantium laborum, ipsam eos asperiores assumenda ipsa
+        tempora aperiam minus perferendis maxime repellat iste hic eum commodi
+        fugit? Rerum, vitae asperiores. Doloribus non, explicabo autem eius
+        incidunt accusamus id. Excepturi natus libero velit! Vitae magni
+        deserunt laboriosam ab veritatis omnis non laudantium nobis dicta ea
+        libero, aperiam explicabo quo illum harum!
+      </p>
+    </section> -->
+
+    <!-- /** |============================ | Modal |============================ */ -->
+
+    <!--                    Modal_first              -->
+
+    <div class="backdrop is-hidden" data-modal-1>
+      <div class="modal">
+        <button class="modal-close-btn btn" type="button" data-modal-close-1>
+          X
+        </button>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <div class="modal-contact-form">
+            <label class="modal-form-label">
+              <span class="modal-form-desc">Name</span>
+              <span class="modal-form-input-wrap">
+                <input
+                  class="modal-form-input"
+                  name="user_name"
+                  type="text"
+                  required
+                  minlength="2"
+                />
+                <svg class="modal-form-label-icon" width="12px" height="12px">
+                  <use href="./images/icons.svg#icon-user-name"></use>
+                </svg>
+              </span>
+            </label>
+            <label class="modal-form-label">
+              <span class="modal-form-desc">Phone</span>
+              <span class="modal-form-input-wrap">
+                <input
+                  class="modal-form-input"
+                  name="user_phone"
+                  type="tel"
+                  required
+                />
+                <svg class="modal-form-label-icon" width="12px" height="12px">
+                  <use href="./images/icons.svg#icon-user-phone"></use>
+                </svg>
+              </span>
+            </label>
+            <label class="modal-form-label">
+              <span class="modal-form-desc">Email</span>
+              <span class="modal-form-input-wrap">
+                <input
+                  class="modal-form-input"
+                  name="user_emeil"
+                  type="email"
+                  required
+                />
+                <svg class="modal-form-label-icon" width="12px" height="12px">
+                  <use href="./images/icons.svg#icon-user-email"></use>
+                </svg>
+              </span>
+            </label>
+            <label class="modal-form-label-desc">
+              <span class="modal-form-desc">Comment</span>
+              <textarea
+                class="modal-form-masage"
+                name="user_comment"
+                cols="30"
+                rows="10"
+                placeholder="Text input"
+              ></textarea>
+            </label>
+          </div>
+          <input
+            class="modal-form-check visually-hidden"
+            type="checkbox"
+            name="user_policy"
+            id="user-policy"
+          />
+          <label class="modal-form-check-desc" for="user-policy">
+            I accept the terms and conditions of the&nbsp;<a
+              class="privacy-policy-link"
+              href=""
+              >Privacy Policy</a
+            >
+          </label>
+          <button class="modal-form-submit hero-button btn" type="submit">
+            send
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!--                    Second Modal                -->
+
+    <div class="backdrop is-hidden" data-modal-2>
+      <div class="modal">
+        <button class="modal-close-btn btn" type="button" data-modal-close-2>
+          X
+        </button>
+        <h2 class="second_mod_title">Second Modal Window</h2>
+        <img
+          class="second_mod_img"
+          src="./img/second_modal/homerspeaks.jpg"
+          alt="Homer"
+        />
+      </div>
+    </div>
+
+    <!--                    Three Modal                    -->
+
+    <div class="backdrop is-hidden" data-modal-3>
+      <!-- backdrop -->
+      <div class="big-modal-window">
+        <button class="modal-close-btn btn" type="button" data-modal-close-3>
+          X
+        </button>
+        <iframe
+          width="1000"
+          height="600"
+          src="https://www.youtube.com/embed/xcJtL7QggTI"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    <div class="backdrop is-hidden" data-modal-4>
+      <div class="modal_map">
+        <button class="modal-close-btn btn" type="button" data-modal-close-4>
+          X
+        </button>
+        <h2 style="text-align: center">Карта Хмельницького</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d71871.52697021539!2d27.001988!3d49.412473!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47320642f9cee759%3A0xd95083d8fe820029!2z0KXQvNC10LvRjNC90LjRhtGM0LrQuNC5LCDQpdC80LXQu9GM0L3QuNGG0YzQutCwINC-0LHQu9Cw0YHRgtGMLCAyOTAwMA!5e1!3m2!1suk!2sua!4v1682244574283!5m2!1suk!2sua"
+          width="100%"
+          height="90%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <script src="./js/modal_first.js"></script>
+    <script src="./js/second_modal.js"></script>
+    <script src="./js/three_modal.js"></script>
+    <script src="./js/four_modal.js"></script>
+  </body>
+</html>
